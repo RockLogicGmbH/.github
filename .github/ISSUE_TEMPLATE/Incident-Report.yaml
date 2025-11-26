@@ -1,0 +1,76 @@
+name: Incident Report
+description: Report an incident within the organisation.
+title: "[Incident Report]: "
+projects: ["RockLogic | Organisation"]
+labels:
+  - "Incident_Report"
+assignees:
+  - ahaider-at
+  - MarvinsLab
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for raising an incident report!
+  - type: input
+    id: email
+    attributes:
+      label: User email for incident report
+      description: Enter email id for user.
+      placeholder: user@rocklogic.at
+    validations:
+      required: true
+  - type: textarea
+    id: incident_description
+    attributes:
+      label: Incident Description
+      description: Describe the incident in detail.
+      placeholder: e.g., Description of the incident...
+    validations:
+      required: true
+  - type: input
+    id: incident_date
+    attributes:
+      label: Incident Date
+      description: Enter the date of the incident.
+      placeholder: dd.mm.yyyy
+    validations:
+      required: true
+  - type: input
+    id: incident_time
+    attributes:
+      label: Incident Time
+      description: Enter the time of the incident.
+      placeholder: HH:MM
+    validations:
+      required: true
+  - type: dropdown
+    id: department
+    attributes:
+      label: Department
+      description: Select the department involved in the incident.
+      multiple: true
+      options:
+        - Infra Team
+        - Admin Team
+        - Dev Team
+        - DevOps Team
+        - HR
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: Enter the location where the incident occurred.
+      placeholder: e.g., Office, Remote, Data Center...
+    validations:
+      required: true
+  - type: textarea
+    id: actions_taken
+    attributes:
+      label: Actions Taken
+      description: Describe any actions taken in response to the incident.
+      placeholder: e.g., Steps taken to mitigate the incident...
+    validations:
+      required: true

@@ -1,0 +1,92 @@
+name: Node SetUp
+description: Submit a ticket for node setup
+title: '[Node Setup]: '
+labels:
+  - Node SetUp 
+projects:
+  - Try Project 1
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for creating the task!
+  - type: textarea
+    id: Desc
+    attributes:
+      label: Description
+      description: Please provide a detailed description of the Task.
+      placeholder: Briefly describe the Task.
+    validations:
+      required: true
+  - type: input
+    id: Execution_Client
+    attributes:
+      label: Execution Client
+      description: Enter the execution client details.
+      placeholder: Enter the execution client details.
+    validations:
+      required: true
+  - type: input
+    id: Consensus_Client
+    attributes:
+      label: Consensus Client
+      description: Enter the consensus client details.
+      placeholder: Enter the consensus client details.  
+    validations:
+      required: true
+  - type: textarea
+    id: Hardware_Spec
+    attributes:
+      label: HardwareSpecification
+      description: Please provide details on the hardware specifications.
+      placeholder: List hardware specifications.
+    validations:
+      required: true
+  - type: input
+    id: Stereum_Version
+    attributes:
+      label: Stereum Version
+      description: Enter the stereum version used for setting up the node
+      placeholder: Enter Stereum Version     
+    validations:
+      required: true
+  - type: dropdown
+    id: Node_Type
+    attributes:
+      label: Node Type
+      description: Please select the node type
+      options:
+        - Full Node
+        - Light Node
+        - Archive Node
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: Severity
+    attributes:
+      label: Severity
+      description: Please select the severity level of the incident.
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+      default: 1
+    validations:
+      required: true
+  - type: textarea
+    id: Dependency
+    attributes:
+      label: Dependency
+      description: List any dependencies related to the node setup.
+  - type: textarea
+    id: Notes
+    attributes:
+      label: Notes
+      description: Additional notes or comments.
+    validations:
+      required: true
+
+  

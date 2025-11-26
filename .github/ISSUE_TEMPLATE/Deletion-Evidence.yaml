@@ -1,0 +1,49 @@
+name: Deletion Evidence Submission
+description: Submit evidence for data deletion.
+title: "[Deletion Evidence]: "
+projects: ["RockLogic | Organisation"]
+labels:
+  - "Deletion_Evidence"
+assignees:
+  - MarvinsLab
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Please provide the following details regarding the data deletion:
+
+  - type: input
+    id: requester_name
+    attributes:
+      label: Who requested the deletion?
+      description: Provide the name of the person who requested the data deletion.
+      placeholder: John Doe
+    validations:
+      required: true
+
+  - type: textarea
+    id: data_deleted
+    attributes:
+      label: Data Deleted
+      description: Specify what data was deleted.
+      placeholder: Github Repositories, User Accounts, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason_for_deletion
+    attributes:
+      label: Reason for Deletion
+      description: Explain why the data was deleted.
+      placeholder: User offboarding, data cleanup, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: deletion_evidence
+    attributes:
+      label: Confirmation of Deletion
+      description: Provide evidence of deletion (e.g., screenshot, log).
+      placeholder: Attach or describe the evidence here.
+    validations:
+      required: true

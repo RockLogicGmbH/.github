@@ -1,0 +1,135 @@
+name: OffB User Request
+description: Request for Offboarding request.
+title: "[OffBoarding Request]: Name of User"
+projects: ["RockLogic | Organisation"]
+labels:
+  - "Access_Request"
+assignees:
+  - domioiRL
+  - ivanmitev
+  - ahaider-at
+  - MarvinsLab
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for raising new user onboarding request!
+  - type: dropdown
+    id: form_of_adress
+    attributes:
+      label: Form of Address
+      description: Enter Form of Address of the user to offboard.
+      options:
+        - Mr.
+        - Ms.
+    validations:
+      required: true
+  - type: input
+    id: full_name
+    attributes:
+      label: First | Last Name
+      description: Enter Name of the user to offboard.
+      placeholder: John Doe
+    validations:
+      required: true
+  - type: input
+    id: user_id
+    attributes:
+      label: Internal User ID
+      description: Enter Internal User ID of the user to offboard.
+      placeholder: jdo
+    validations:
+      required: true
+  - type: input
+    id: username
+    attributes:
+      label: Username (Mail Address)
+      description: Enter Username (Mail Address) of the user to offboard.
+      placeholder: john.doe@rocklogic.at
+    validations:
+      required: true
+  - type: input
+    id: date_offboarding
+    attributes:
+      label: Date of Offboarding
+      description: Enter Date of Offboarding of the user to offboard.
+      placeholder: dd.mm.yyyy
+    validations:
+      required: true
+  - type: textarea
+    id: user_notes
+    attributes:
+      label: User Notes
+      description: Enter User Notes of the user to offboard.
+      placeholder: Additional information about the user.
+  - type: checkboxes
+    id: department
+    attributes:
+      label: Department
+      description: Department of the user to offboard.
+      options:
+        - label: Developer
+        - label: Node Operator
+        - label: Infrastructure
+        - label: SSF
+        - label: HR
+        - label: Office
+        - label: Marketing
+        - label: External
+  - type: textarea
+    id: equipment_notes
+    attributes:
+      label: Equipment Notes
+      description: Enter additional accessories or notes of the user to offboard.
+      placeholder: E.g. mouse, keyboard, monitor, etc.
+  - type: textarea
+    id: access_notes
+    attributes:
+      label: Accesses
+      description: List accesses or links to access request issues of the user to offboard.
+      placeholder: E.g. link to github issues, etc.
+  - type: checkboxes
+    id: vpn
+    attributes:
+      label: VPN
+      description: |
+        You may select more than one.
+      options:
+        - label: NDC2
+        - label: FLE
+        - label: LEO
+  - type: checkboxes
+    id: access_rights
+    attributes:
+      label: Access Rights
+      description: |
+        You may select more than one.
+      options:
+        - label: Microsoft Office 365 Business Basic (Browser variante)
+        - label: Microsoft Office 365 Business Standart (Offline variante)
+        - label: Sharepoint RockLogic
+        - label: Sharepoint RockLogic Intranet
+        - label: Sharepoint RockLogic Documentation
+        - label: Sharepoint RockLogic ISO (wip-iso-27001-a)
+        - label: Sharepoint RockLogic Infrastructur (RL-Inventory)
+        - label: Sharepoint RockLogic Bank Gutmann
+        - label: Sharepoint RockLogic Centrovox
+        - label: Sharepoint Stereum (stereum-private)
+        - label: GitHub
+        - label: Bitwarden
+        - label: Toggl
+  - type: checkboxes
+    id: special_software_licenses
+    attributes:
+      label: Special Software Licenses
+      description: |
+        You may select more than one.
+      options:
+        - label: ChatGPT
+        - label: RoyalTS
+  - type: textarea
+    id: special_software_notes
+    attributes:
+      label: Special Software Notes
+      description: Enter Special Software Notes of the user to offboard.
+      placeholder: E.g. additional software, licenses, etc.

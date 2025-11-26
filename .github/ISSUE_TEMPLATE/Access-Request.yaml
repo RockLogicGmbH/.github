@@ -1,0 +1,160 @@
+name: Access Request for Existing User
+description: Request tool/ system access for Existing Users.
+title: "[Access Request]: "
+projects: ["RockLogic | Organisation"]
+labels:
+  - "Access_Request"
+assignees:
+  - domioiRL
+  - ahaider-at
+  - stefa2k
+  - ivanmitev
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for raising tool/system access request!
+  - type: input
+    id: email
+    attributes:
+      label: User email for access request
+      description: Enter email id for user.
+      placeholder: user@rocklogic.at
+    validations:
+      required: true
+  - type: input
+    id: role
+    attributes:
+      label: Requested User role
+      description: Enter role of user requesting for access.
+      placeholder: HR/ Developer..etc
+    validations:
+      required: true
+  - type: input
+    id: department
+    attributes:
+      label: Requested User Team or Department
+      description: Enter Team/ Department of user requesting for access.
+      placeholder: Marketing/ Node Op..etc
+    validations:
+      required: true
+  - type: textarea
+    id: vm
+    attributes:
+      label: Request for VM
+      description: If you need a VM, please provide VMID/DC/Name
+      placeholder: VMID/DC/Name
+  - type: markdown
+    attributes:
+      value: "## Sharepoint Portals and Lists"
+  - type: dropdown
+    id: sharepoint_portals
+    attributes:
+      label: Sharepoint Portals
+      multiple: true
+      options:
+        - Intranet
+        - RockLogic
+        - ISO 27001
+        - RL-Inventory
+        - RockLogic-BankGutmann
+        - RockLogic- Documentation
+        - RockLogic-Centrovox
+        - RL-Marketing
+  - type: dropdown
+    id: sharepoint_lists
+    attributes:
+      label: Sharepoint Lists
+      multiple: true
+      options:
+        - Devices
+        - Domains
+        - GitHub Repos
+        - IP-Blocks
+        - Licenses
+        - RL-VMs
+        - Software
+  - type: textarea
+    id: github_repos
+    attributes:
+      label: GitHub Repositories
+      description: If you need access to specific GitHub repositories, please list them here.
+  - type: checkboxes
+    id: data_center
+    attributes:
+      label: Data Center
+      description: Select the required Data Center VPN access
+      options:
+        - label: VPN Data Center NDC2
+        - label: VPN Data Center FLE
+        - label: VPN Data Center LEO
+  - type: checkboxes
+    id: physical_access
+    attributes:
+      label: Physical access
+      description: Select the required Data Center physical access
+      options:
+        - label: Physical access permission Data Center NDC2
+        - label: Physical access permission Data Center FLE
+        - label: Physical access permission Data Center LEO
+  - type: checkboxes
+    id: software
+    attributes:
+      label: Software
+      description: Select the required Software access
+      options:
+        - label: Toggl
+        - label: ChatGPT
+        - label: Bitwarden
+        - label: MFA (MS Auth)
+  - type: checkboxes
+    id: customers
+    attributes:
+      label: Customers
+      description: Select the required Customer access
+      options:
+        - label: Bank Gutmann
+        - label: Centrovox
+  - type: dropdown
+    id: admin_tools
+    attributes:
+      label: Admin Tools
+      description: Select the required Admin Tools access
+      multiple: true
+      options:
+        - Miradore
+        - Entra ID
+        - Apple Business Manager
+        - MS 365
+        - Exchange Server
+        - Google
+        - Knox
+        - ChatGPT
+  - type: markdown
+    attributes:
+      value: "## Miscellaneous"
+  - type: textarea
+    id: misc_apps_mac_ios
+    attributes:
+      label: Request for Apps [Mac/iOS]
+  - type: textarea
+    id: misc_apps_android
+    attributes:
+      label: Request for Apps [Android]
+  - type: textarea
+    id: misc_apps_windows
+    attributes:
+      label: Request for Apps [Windows]
+  - type: textarea
+    id: misc_other
+    attributes:
+      label: Miscellaneous Information or Requests
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason and additional details for access
+      description: |
+        Provide justification the access is required for the mentioned user. 
+        *Unless permission requirement are specified, default permissions will be applied based on role/ department*
+    validations:
+      required: true
