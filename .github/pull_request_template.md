@@ -1,4 +1,6 @@
-## ⚠️ **Required:** Replace all italic placeholders before creating this PR.
+## ⚠️ **Required:** Replace all placeholders marked with `[REPLACE_ME: ...]` before creating this PR.
+
+## ⚠️ **Additionally**: For any checklist section, select the appropriate option by changing the corresponding [ ] to [x] and leave the others unchecked. You can check these with a click after the PR has been created also.
 
 ---
 
@@ -6,7 +8,7 @@
 
 ## 🛠️ **Implementation Details**
 
-_Describe the specific modifications introduced in this change._
+[REPLACE_ME: Describe the specific modifications introduced in this change]
 
 ---
 
@@ -15,10 +17,10 @@ _Describe the specific modifications introduced in this change._
 ## 🗓️ **Validation Details**
 
 **• Validation Date:**
-_DD/MM/YYYY_
+[REPLACE_ME: DD/MM/YYYY]
 
 **• Validation Performed By:**
-_Full Name_
+[REPLACE_ME: Full Name]
 
 **• Security Testing Performed:**
 
@@ -29,7 +31,7 @@ _Full Name_
 
 ## 📝 **Validation Notes**
 
-_Summarize findings and confirm whether the change has no adverse security effects._
+[REPLACE_ME: Summarize findings and confirm whether the change has no adverse security effects]
 
 ---
 
