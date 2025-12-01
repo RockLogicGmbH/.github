@@ -3,5 +3,10 @@
     "name": "type: bug",
     "color": "d73a4a",
     "description": "Something is not working"
+  },
+  {
+    "name": "type: test",
+    "color": "00ff00",
+    "description": "Something is working as intented"
   }
 ]
