@@ -4,11 +4,6 @@ title: "[Access Request]: "
 projects: ["RockLogic | Organisation"]
 labels:
   - "Access_Request"
-assignees:
-  - domioiRL
-  - ahaider-at
-  - stefa2k
-  - ivanmitev
 body:
   - type: markdown
     attributes:
