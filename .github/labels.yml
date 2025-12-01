@@ -8,10 +8,5 @@
     "name": "type: test",
     "color": "00ff00",
     "description": "Something is working as intented"
-  },
-  {
-    "name": "type: test 2",
-    "color": "00ff00",
-    "description": "Something is working as intented"
   }
 ]
