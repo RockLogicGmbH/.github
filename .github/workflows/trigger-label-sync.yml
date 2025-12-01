@@ -28,7 +28,7 @@ jobs:
           for REPO in "${REPOS[@]}"; do
             echo "Triggering $WORKFLOW_FILE in $ORG/$REPO..."
 
-            curl -s -L \
+            curl -v -L \
               -X POST \
               -H "Accept: application/vnd.github+json" \
               -H "Authorization: Bearer $TOKEN" \
