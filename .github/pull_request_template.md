@@ -14,7 +14,7 @@
 
 ## **Validation Details**
 
-- **• Validation Date:**
+- **Validation Date:**
   [REPLACE_ME: DD/MM/YYYY]
 
 - **Validation Performed By:**
