@@ -8,5 +8,10 @@
     "name": "type: test",
     "color": "00ff00",
     "description": "Something is working as intented"
+  },
+  {
+    "name": "type: richtig gut",
+    "color": "0000ff",
+    "description": "Something is working very well"
   }
 ]
