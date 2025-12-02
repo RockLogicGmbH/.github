@@ -33,6 +33,6 @@ Security Testing Performed:
 
 ---
 
-# Security Review Checklist
+# Security Review
 
 - [ ] I confirm that I understand and have complied with all requirements outlined in the [Secure Development Guideline](https://rocklogic.sharepoint.com/sites/Intranet#secure-development-guideline).
