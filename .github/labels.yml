@@ -13,5 +13,10 @@
     "name": "type: richtig schlecht",
     "color": "0000ff",
     "description": "Something is working very badly"
+  },
+  {
+    "name": "type: ist ganz inordnung",
+    "color": "ffaa55",
+    "description": "Something is working"
   }
 ]
