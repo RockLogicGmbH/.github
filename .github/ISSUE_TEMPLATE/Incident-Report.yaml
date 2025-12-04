@@ -12,14 +12,16 @@ body:
     attributes:
       value: |
         Thanks for raising an incident report!
+
   - type: input
-    id: email
+    id: reporter_name
     attributes:
-      label: User email for incident report
-      description: Enter email id for user.
-      placeholder: user@rocklogic.at
+      label: Reporter Name
+      description: Full name of the person reporting the incident.
+      placeholder: John Doe
     validations:
       required: true
+
   - type: textarea
     id: incident_description
     attributes:
@@ -28,6 +30,7 @@ body:
       placeholder: e.g., Description of the incident...
     validations:
       required: true
+
   - type: input
     id: incident_date
     attributes:
@@ -36,6 +39,7 @@ body:
       placeholder: dd.mm.yyyy
     validations:
       required: true
+
   - type: input
     id: incident_time
     attributes:
@@ -44,6 +48,7 @@ body:
       placeholder: HH:MM
     validations:
       required: true
+
   - type: dropdown
     id: department
     attributes:
@@ -58,6 +63,7 @@ body:
         - HR
     validations:
       required: true
+
   - type: input
     id: location
     attributes:
@@ -66,6 +72,7 @@ body:
       placeholder: e.g., Office, Remote, Data Center...
     validations:
       required: true
+
   - type: textarea
     id: actions_taken
     attributes:

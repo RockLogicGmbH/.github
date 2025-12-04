@@ -11,7 +11,7 @@ body:
         ## Section 1: General Information
 
   - type: input
-    id: name
+    id: requester_name
     attributes:
       label: Requester Name
       description: Full name of the requester.
@@ -71,8 +71,8 @@ body:
     id: deadline
     attributes:
       label: Deadline
-      description: Business or technical justification for the change.
-      placeholder: DD/MM/YYYY
+      description: Desired completion date for the change.
+      placeholder: dd.mm.yyyy
     validations:
       required: false
 
@@ -135,7 +135,7 @@ body:
     id: requester_date
     attributes:
       label: Requester Date
-      placeholder: DD/MM/YYYY
+      placeholder: dd.mm.yyyy
     validations:
       required: false
 
@@ -159,7 +159,7 @@ body:
     id: security_date
     attributes:
       label: Security Team Date
-      placeholder: DD/MM/YYYY
+      placeholder: dd.mm.yyyy
     validations:
       required: false
 
@@ -183,7 +183,7 @@ body:
     id: management_date
     attributes:
       label: Management Date
-      placeholder: DD/MM/YYYY
+      placeholder: dd.mm.yyyy
     validations:
       required: false
 
@@ -196,7 +196,7 @@ body:
     id: validation_date
     attributes:
       label: Validation Date
-      placeholder: DD/MM/YYYY
+      placeholder: dd.mm.yyyy
     validations:
       required: false
 

@@ -9,14 +9,16 @@ body:
     attributes:
       value: |
         Thanks for raising tool/system access request!
+
   - type: input
-    id: email
+    id: name
     attributes:
-      label: User email for access request
-      description: Enter email id for user.
-      placeholder: user@rocklogic.at
+      label: User name requesting access.
+      description: Enter full name of user.
+      placeholder: John Doe
     validations:
       required: true
+
   - type: input
     id: role
     attributes:
@@ -25,6 +27,7 @@ body:
       placeholder: HR/ Developer..etc
     validations:
       required: true
+
   - type: input
     id: department
     attributes:
@@ -33,15 +36,18 @@ body:
       placeholder: Marketing/ Node Op..etc
     validations:
       required: true
+
   - type: textarea
     id: vm
     attributes:
       label: Request for VM
       description: If you need a VM, please provide VMID/DC/Name
       placeholder: VMID/DC/Name
+
   - type: markdown
     attributes:
       value: "## Sharepoint Portals and Lists"
+
   - type: dropdown
     id: sharepoint_portals
     attributes:
@@ -56,6 +62,7 @@ body:
         - RockLogic- Documentation
         - RockLogic-Centrovox
         - RL-Marketing
+
   - type: dropdown
     id: sharepoint_lists
     attributes:
@@ -69,11 +76,13 @@ body:
         - Licenses
         - RL-VMs
         - Software
+
   - type: textarea
     id: github_repos
     attributes:
       label: GitHub Repositories
       description: If you need access to specific GitHub repositories, please list them here.
+
   - type: checkboxes
     id: data_center
     attributes:
@@ -83,6 +92,7 @@ body:
         - label: VPN Data Center NDC2
         - label: VPN Data Center FLE
         - label: VPN Data Center LEO
+
   - type: checkboxes
     id: physical_access
     attributes:
@@ -92,6 +102,7 @@ body:
         - label: Physical access permission Data Center NDC2
         - label: Physical access permission Data Center FLE
         - label: Physical access permission Data Center LEO
+
   - type: checkboxes
     id: software
     attributes:
@@ -102,6 +113,7 @@ body:
         - label: ChatGPT
         - label: Bitwarden
         - label: MFA (MS Auth)
+
   - type: checkboxes
     id: customers
     attributes:
@@ -110,6 +122,7 @@ body:
       options:
         - label: Bank Gutmann
         - label: Centrovox
+
   - type: dropdown
     id: admin_tools
     attributes:
@@ -125,25 +138,32 @@ body:
         - Google
         - Knox
         - ChatGPT
+
   - type: markdown
     attributes:
       value: "## Miscellaneous"
+
   - type: textarea
     id: misc_apps_mac_ios
     attributes:
       label: Request for Apps [Mac/iOS]
+
   - type: textarea
     id: misc_apps_android
     attributes:
       label: Request for Apps [Android]
+
   - type: textarea
     id: misc_apps_windows
     attributes:
       label: Request for Apps [Windows]
+
   - type: textarea
     id: misc_other
     attributes:
       label: Miscellaneous Information or Requests
+      description: If you have more specific access requests, please mention them here.
+
   - type: textarea
     id: reason
     attributes:
