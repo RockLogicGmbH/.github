@@ -12,14 +12,16 @@ body:
     attributes:
       value: |
         Thanks for raising hardware request!
+
   - type: input
-    id: email
+    id: name
     attributes:
-      label: User email for hardware request
-      description: Enter email id for user.
-      placeholder: user@rocklogic.at
+      label: User name requesting hardware.
+      description: Enter full name of user.
+      placeholder: John Doe
     validations:
       required: true
+
   - type: textarea
     id: hardware_details
     attributes:

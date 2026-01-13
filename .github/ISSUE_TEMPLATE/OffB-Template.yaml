@@ -15,6 +15,7 @@ body:
     attributes:
       value: |
         Thanks for raising new user onboarding request!
+
   - type: dropdown
     id: form_of_adress
     attributes:
@@ -25,6 +26,7 @@ body:
         - Ms.
     validations:
       required: true
+
   - type: input
     id: full_name
     attributes:
@@ -33,6 +35,7 @@ body:
       placeholder: John Doe
     validations:
       required: true
+
   - type: input
     id: user_id
     attributes:
@@ -41,6 +44,7 @@ body:
       placeholder: jdo
     validations:
       required: true
+
   - type: input
     id: username
     attributes:
@@ -49,6 +53,7 @@ body:
       placeholder: john.doe@rocklogic.at
     validations:
       required: true
+
   - type: input
     id: date_offboarding
     attributes:
@@ -57,12 +62,14 @@ body:
       placeholder: dd.mm.yyyy
     validations:
       required: true
+
   - type: textarea
     id: user_notes
     attributes:
       label: User Notes
       description: Enter User Notes of the user to offboard.
       placeholder: Additional information about the user.
+
   - type: checkboxes
     id: department
     attributes:
@@ -77,34 +84,38 @@ body:
         - label: Office
         - label: Marketing
         - label: External
+
   - type: textarea
     id: equipment_notes
     attributes:
       label: Equipment Notes
       description: Enter additional accessories or notes of the user to offboard.
       placeholder: E.g. mouse, keyboard, monitor, etc.
+
   - type: textarea
     id: access_notes
     attributes:
       label: Accesses
       description: List accesses or links to access request issues of the user to offboard.
       placeholder: E.g. link to github issues, etc.
+
   - type: checkboxes
     id: vpn
     attributes:
       label: VPN
       description: |
-        You may select more than one.
+        Select VPN access to be removed.
       options:
         - label: NDC2
         - label: FLE
         - label: LEO
+
   - type: checkboxes
     id: access_rights
     attributes:
       label: Access Rights
       description: |
-        You may select more than one.
+        Select access rights to be removed.
       options:
         - label: Microsoft Office 365 Business Basic (Browser variante)
         - label: Microsoft Office 365 Business Standart (Offline variante)
@@ -119,15 +130,17 @@ body:
         - label: GitHub
         - label: Bitwarden
         - label: Toggl
+
   - type: checkboxes
     id: special_software_licenses
     attributes:
       label: Special Software Licenses
       description: |
-        You may select more than one.
+        Select special software licenses to be removed.
       options:
         - label: ChatGPT
         - label: RoyalTS
+
   - type: textarea
     id: special_software_notes
     attributes:

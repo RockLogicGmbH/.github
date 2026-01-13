@@ -15,7 +15,7 @@
 ## Validation Details
 
 - Validation Date:
-  📝[REPLACE_ME: DD/MM/YYYY]
+  📝[REPLACE_ME: dd.mm.yyyy]
 
 - Validation Performed By:
   📝[REPLACE_ME: Full Name]
