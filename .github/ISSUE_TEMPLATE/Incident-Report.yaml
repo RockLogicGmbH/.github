@@ -4,6 +4,7 @@ title: "[Incident Report]: "
 projects: ["RockLogic | Organisation"]
 labels:
   - "Incident_Report"
+type: Bug/Incident
 assignees:
   - ahaider-at
   - MarvinsLab
