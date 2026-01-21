@@ -51,7 +51,7 @@ body:
     validations:
       required: false
 
-  - type: input
+  - type: textarea
     id: tools_used
     attributes:
       label: Tools Used
@@ -60,7 +60,7 @@ body:
     validations:
       required: false
 
-  - type: input
+  - type: textarea
     id: capacity
     attributes:
       label: Capacity Changes
