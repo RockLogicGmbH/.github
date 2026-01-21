@@ -11,7 +11,7 @@ body:
         ## Section 1: General Information
 
   - type: input
-    id: requester_name
+    id: req_name
     attributes:
       label: Requester Name
       description: Full name of the requester.
@@ -43,6 +43,24 @@ body:
         - "Centrovox"
     validations:
       required: true
+
+  - type: input
+    id: tools_used
+    attributes:
+      label: Tools Used
+      description: Specify the tools involved in the change.
+      placeholder: e.g., AWS, Docker
+    validations:
+      required: false
+
+  - type: input
+    id: capacity
+    attributes:
+      label: Capacity Changes
+      description: Specify any capacity changes (e.g., CPU, RAM, Storage).
+      placeholder: e.g., Increased VM Storage
+    validations:
+      required: false
 
   - type: markdown
     attributes:
