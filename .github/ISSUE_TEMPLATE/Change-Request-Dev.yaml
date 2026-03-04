@@ -51,24 +51,6 @@ body:
     validations:
       required: false
 
-  - type: textarea
-    id: tools_used
-    attributes:
-      label: Tools Used
-      description: Specify the tools involved in the change.
-      placeholder: e.g., AWS, Docker
-    validations:
-      required: false
-
-  - type: textarea
-    id: capacity
-    attributes:
-      label: Capacity Changes
-      description: Specify any capacity changes (e.g., CPU, RAM, Storage).
-      placeholder: e.g., Increased VM Storage
-    validations:
-      required: false
-
   - type: markdown
     attributes:
       value: |
