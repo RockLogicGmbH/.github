@@ -24,7 +24,7 @@ body:
     attributes:
       label: Requested User role
       description: Enter role of user requesting for access.
-      placeholder: HR/ Developer..etc
+      placeholder: HR/Developer..etc
     validations:
       required: true
 
@@ -33,7 +33,7 @@ body:
     attributes:
       label: Requested User Team or Department
       description: Enter Team/ Department of user requesting for access.
-      placeholder: Marketing/ Node Op..etc
+      placeholder: Marketing/Node Op..etc
     validations:
       required: true
 
@@ -56,7 +56,7 @@ body:
       options:
         - Intranet
         - RockLogic
-        - ISO 27001
+        - ISMS
         - RL-Inventory
         - RockLogic-BankGutmann
         - RockLogic- Documentation
@@ -110,8 +110,8 @@ body:
       description: Select the required Software access
       options:
         - label: Toggl
-        - label: ChatGPT
-        - label: Bitwarden
+        - label: Claude
+        - label: heylogin
         - label: MFA (MS Auth)
 
   - type: checkboxes
@@ -135,9 +135,8 @@ body:
         - Apple Business Manager
         - MS 365
         - Exchange Server
-        - Google
-        - Knox
-        - ChatGPT
+        - Google Enterprise
+        - Samsung Knox
 
   - type: markdown
     attributes:
