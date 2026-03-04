@@ -155,14 +155,21 @@ body:
         - label: Sharepoint RockLogic
         - label: Sharepoint RockLogic Intranet
         - label: Sharepoint RockLogic Documentation
-        - label: Sharepoint RockLogic ISO (wip-iso-27001-a)
-        - label: Sharepoint RockLogic Infrastructur (RL-Inventory)
-        - label: Sharepoint RockLogic Bank Gutmann
+        - label: Sharepoint RockLogic ISMS
+        - label: Sharepoint RockLogic RL-Inventory
+        - label: Sharepoint RockLogic BankGutmann
         - label: Sharepoint RockLogic Centrovox
-        - label: Sharepoint Stereum (stereum-private)
+        - label: Sharepoint Stereum stereum-private
         - label: GitHub
-        - label: Bitwarden
+        - label: heylogin
         - label: Toggl
+
+  - type: textarea
+    id: repos
+    attributes:
+      label: Repositories
+      description: If GitHub is checked, which repos are needed.
+      placeholder: E.g. link to repo or repo name.
 
   - type: checkboxes
     id: special_software_licenses
@@ -171,8 +178,9 @@ body:
       description: |
         Select required special software licenses.
       options:
-        - label: ChatGPT
+        - label: Claude
         - label: RoyalTS
+        - label: Google Analytics
 
   - type: textarea
     id: special_software_notes
