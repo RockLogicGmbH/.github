@@ -10,7 +10,7 @@ on:
         type: boolean
 
 jobs:
-  sync-workflow:
+  sync-labels:
     runs-on: ubuntu-latest
 
     permissions:
@@ -31,12 +31,12 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install -r .github/src/sync-workflow/requirements.txt
+        run: pip install -r .github/src/sync-labels/requirements.txt
 
       - name: Run script
         run: |
           if [ "${{ inputs.dry_run }}" = "true" ]; then
-            python .github/src/sync-workflow/main.py --dry-run
+            python .github/src/sync-labels/main.py --dry-run
           else
-            python .github/src/sync-workflow/main.py
+            python .github/src/sync-labels/main.py
           fi
