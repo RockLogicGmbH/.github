@@ -1,0 +1,42 @@
+name: Trigger Workflow Sync
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Run without creating branches or PRs"
+        required: true
+        default: true
+        type: boolean
+
+jobs:
+  sync-labels:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    env:
+      GITHUB_ORG: RockLogicGmbH
+      GITHUB_TOKEN: ${{ secrets.ORG_TRIGGER_PAT }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r .github/src/sync-labels/requirements.txt
+
+      - name: Run script
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python .github/src/sync-labels/main.py --dry-run
+          else
+            python .github/src/sync-labels/main.py
+          fi
