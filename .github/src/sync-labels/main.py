@@ -18,8 +18,8 @@ SOURCE_FILE = Path(__file__).with_name("sync-labels.yml")
 TARGET_PATH = ".github/workflows/sync-labels.yml"
 DRY_RUN = "--dry-run" in sys.argv
 
-COMMIT_MESSAGE = "CHORE: sync sync-labels.yml workflow"
-PR_TITLE = "CHORE: sync sync-labels.yml workflow"
+COMMIT_MESSAGE = "CHORE: rollout sync-labels.yml"
+PR_TITLE = "CHORE: rollout sync-labels.yml"
 PR_BODY = "This PR rolls out the sync-labels.yml workflow file."
 BRANCH_NAME = "chore/sync-labels-workflow"
 
@@ -132,6 +132,16 @@ def create_pr(owner: str, repo: str, head: str, base: str) -> str | None:
     response.raise_for_status()
     return response.json()["html_url"]
 
+def delete_branch(owner: str, repo: str, branch: str) -> None:
+    response = requests.delete(
+        f"{GITHUB_API}/repos/{owner}/{repo}/git/refs/heads/{branch}",
+        headers=github_headers(),
+        timeout=30,
+    )
+
+    # 204 = deleted, 404 = branch did not exist
+    if response.status_code not in (204, 404):
+        response.raise_for_status()
 
 def main() -> int:
     if not SOURCE_FILE.exists():
@@ -165,7 +175,8 @@ def main() -> int:
                     f"on branch {BRANCH_NAME} -> PR to {default_branch}"
                 )
                 continue
-
+            
+            delete_branch(owner, repo_name, BRANCH_NAME)
             create_branch(owner, repo_name, BRANCH_NAME, base_sha)
 
             put_file(owner, repo_name, TARGET_PATH, content, BRANCH_NAME, existing_sha)
