@@ -140,7 +140,7 @@ def delete_branch(owner: str, repo: str, branch: str) -> None:
     )
 
     # 204 = deleted, 404 = branch did not exist
-    if response.status_code not in (204, 404):
+    if response.status_code not in (204, 422, 409):
         response.raise_for_status()
 
 def main() -> int:
