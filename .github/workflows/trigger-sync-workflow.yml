@@ -10,7 +10,7 @@ on:
         type: boolean
 
 jobs:
-  sync-labels:
+  rollout-sync-labels:
     runs-on: ubuntu-latest
 
     permissions:
