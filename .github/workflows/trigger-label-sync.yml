@@ -3,7 +3,7 @@ name: Trigger label sync in all repos
 on:
   push:
     paths:
-      - '.github/labels.yml'   # only when the label config changes
+      - ".github/labels.yml" # only when the label config changes
 
 jobs:
   dispatch:
@@ -15,11 +15,19 @@ jobs:
           ORG: RockLogicGmbH
           TOKEN: ${{ secrets.ORG_TRIGGER_PAT }}
         run: |
-          # List of repos that should sync labels
-          REPOS=(
-            "test"
-            # "repo-2"
-            # "another-repo"
+          # Dynamically fetch all repos from the org (mirrors list_repos in main.py)
+          mapfile -t REPOS < <(
+            page=1
+            while true; do
+              batch=$(curl -s \
+                -H "Accept: application/vnd.github+json" \
+                -H "Authorization: Bearer $TOKEN" \
+                "https://api.github.com/orgs/$ORG/repos?per_page=100&page=$page" \
+                | jq -r '.[].name')
+              [ -z "$batch" ] && break
+              echo "$batch"
+              page=$((page + 1))
+            done
           )
 
           WORKFLOW_FILE="sync-labels.yml"
@@ -28,7 +36,7 @@ jobs:
           for REPO in "${REPOS[@]}"; do
             echo "Triggering $WORKFLOW_FILE in $ORG/$REPO..."
 
-            curl -s \
+            curl -s --fail-with-body \
               -X POST \
               -H "Accept: application/vnd.github+json" \
               -H "Authorization: Bearer $TOKEN" \
