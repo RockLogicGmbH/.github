@@ -150,3 +150,11 @@ body:
       label: Special Software Notes
       description: Enter Special Software Notes of the user to offboard.
       placeholder: E.g. additional software, licenses, etc.
+
+  - type: checkboxes
+    id: confidentiality_policy
+    attributes:
+      label: Confidentiality Policy
+      description: Confirm that the offboarded employee has been informed about the confidentiality policy.
+      options:
+        - label: Employee has been informed about the confidentiality policy
