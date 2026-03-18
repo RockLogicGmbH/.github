@@ -82,6 +82,7 @@ body:
     attributes:
       label: GitHub Repositories
       description: If you need access to specific GitHub repositories, please list them here.
+      placeholder: "org/repo-name-1\norg/repo-name-2"
 
   - type: textarea
     id: github_token
@@ -91,13 +92,9 @@ body:
         If you need a fine-grained GitHub token, please describe the required permissions.
         Include: token name, expiration, target repositories, and all required permissions (e.g. Contents: Read, Pull requests: Write, Metadata: Read).
       placeholder: |
-        Token name: ci-deploy-token
-        Expiration: 90 days
-        Repositories: stereum-dev/ethereum2-node-tools
-        Permissions:
-          - Contents: Read and Write
-          - Metadata: Read-only
-          - Pull requests: Read-only
+        Name: ci-deploy-token | Expiration: 90 days
+        Repos: org/repo-name
+        Permissions: Contents: Read, Pull requests: Write
 
   - type: checkboxes
     id: data_center
