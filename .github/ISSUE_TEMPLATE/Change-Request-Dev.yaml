@@ -14,10 +14,10 @@ body:
     id: req_name
     attributes:
       label: Requester Name
-      description: Full name of the requester.
-      placeholder: John Doe
+      description: Requester is the creator of this ticket unless otherwise specified
+      placeholder: Requester is the creator of this ticket
     validations:
-      required: true
+      required: false
 
   - type: markdown
     attributes:
