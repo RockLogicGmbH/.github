@@ -14,10 +14,10 @@ body:
     id: name
     attributes:
       label: User name requesting access.
-      description: Enter full name of user.
-      placeholder: John Doe
+      description: Requester is the creator of this ticket unless otherwise specified
+      placeholder: Requester is the creator of this ticket  
     validations:
-      required: true
+      required: false
 
   - type: input
     id: role
