@@ -129,7 +129,6 @@ body:
         - label: Sharepoint Stereum stereum-private
         - label: GitHub
         - label: Bitwarden
-        - label: heylogin
         - label: Toggl
 
   - type: checkboxes

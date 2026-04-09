@@ -161,15 +161,15 @@ body:
         - label: Sharepoint RockLogic Centrovox
         - label: Sharepoint Stereum stereum-private
         - label: GitHub
-        - label: heylogin
+        - label: Bitwarden
         - label: Toggl
 
   - type: textarea
-    id: repos
+    id: repos_lists
     attributes:
-      label: Repositories
-      description: If GitHub is checked, which repos are needed.
-      placeholder: E.g. link to repo or repo name.
+      label: Repositories or Sharepoint Lists
+      description: If GitHub or Sharepoint (any) is checked, which repos or lists are needed.
+      placeholder: E.g. link to repo/list or repo/list name.
 
   - type: checkboxes
     id: special_software_licenses

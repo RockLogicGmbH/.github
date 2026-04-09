@@ -15,7 +15,7 @@ body:
     attributes:
       label: User name requesting access.
       description: Requester is the creator of this ticket unless otherwise specified
-      placeholder: Requester is the creator of this ticket  
+      placeholder: Requester is the creator of this ticket
     validations:
       required: false
 
@@ -59,9 +59,10 @@ body:
         - ISMS
         - RL-Inventory
         - RockLogic-BankGutmann
-        - RockLogic- Documentation
+        - RockLogic-Documentation
         - RockLogic-Centrovox
         - RL-Marketing
+        - stereum-private
 
   - type: dropdown
     id: sharepoint_lists
@@ -76,6 +77,7 @@ body:
         - Licenses
         - RL-VMs
         - Software
+        - Non-Human IDs
 
   - type: textarea
     id: github_repos
